@@ -92,11 +92,54 @@ fashion, with a space on either side of the equals sign:
 
 You should specify a return type for all public members.
 Consider it documentation checked by the compiler.
-It also helps in preserving binary compatibility in the face of changing type inference (changes to the method implementation may propagate to the return type if it is inferred).
+It also helps in preserving binary compatibility in the face of changing
+type inference (changes to the method implementation may propagate to the
+return type if it is inferred).
 
 Local methods or private methods may omit their return type:
 
     private def foo(x: Int = 6, y: Int = 7) = x + y
+
+### Avoid left gutter
+
+When breaking statements such as function declarations onto multiple
+lines, wrap at the brackets and line up arguments indented one level,
+rather than starting on the same line as the brackets and forcing
+subsequent lines to line up from there, i.e.
+
+    def myMethodHasQuiteALongNameAndSeveralArguments(
+      argument1: String,
+      argument2: String,
+      argument3: String
+    )
+
+    def andHereIsACurriedFunction(
+      argument1: String,
+      argument2: String
+    )(implicit ec: ExecutionContext, potato: Potato)
+
+    // Where both argument sets would be too long
+    // for one line individually
+    def andACurriedFunctionWithLoadsOfArguments(
+      argument1: String,
+      argument2: String,
+      argument3: String
+    )(
+      implicit ec: ExecutionContext,
+      cfg: SomeConfigStuff,
+      corrId: CorrelationId,
+      otherStuff: OtherStuff
+    )
+
+Do **not** wrap them like this:
+
+    // wrong!
+    def myMethodHasQuiteALongNameAndSeveralArguments(argument1: String,
+                                                     argument2: String,
+                                                     argument3: String)
+
+    def andHereIsACurriedFunction(arg1: String, arg2: String, arg3: String)
+                                 (implicit ec: ExecutionContext, potato: Potato)
 
 #### Procedure Syntax
 
