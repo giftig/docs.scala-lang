@@ -100,7 +100,7 @@ conventions are used:
 
 -   For accessors of properties, the name of the method should be the
     name of the property.
--   In some instances, it is acceptable to prepend "\`is\`" on a boolean
+-   In some instances, it is acceptable to prepend "`is`" on a boolean
     accessor (e.g. `isEmpty`). This should only be the case when no
     corresponding mutator is provided. Please note that the
     [Lift](http://liftweb.net) convention of appending "`_?`" to boolean
