@@ -5,7 +5,7 @@ title: Scaladoc
 partof: style
 overview-name: "Style Guide"
 
-num: 10
+num: 11
 
 previous-page: declarations
 ---
@@ -23,12 +23,9 @@ summary (useful for experienced users as reference), while providing
 deeper examples in the detailed sections (which can be ignored by
 experienced users, but can be invaluable for newcomers).
 
-The Scaladoc tool does not mandate a documentation comment style.
-
-The following examples demonstrate a single line summary followed
-by detailed documentation, in the three common styles of indentation.
-
-Javadoc style:
+The Scaladoc tool does not mandate a documentation comment style,
+however the community primarily uses javadoc-style layout as shown
+below.
 
     /**
      * Provides a service as described.
@@ -38,24 +35,6 @@ Javadoc style:
      */
     def member: Unit = ()
 
-Scaladoc style, with gutter asterisks aligned in column two:
-
-    /** Provides a service as described.
-     *
-     *  This is further documentation of what we're documenting.
-     *  Here are more details about how it works and what it does.
-     */
-    def member: Unit = ()
-
-Scaladoc style, with gutter asterisks aligned in column three:
-
-    /** Provides a service as described.
-      *
-      * This is further documentation of what we're documenting.
-      * Here are more details about how it works and what it does.
-      */
-    def member: Unit = ()
-
 Because the comment markup is sensitive to whitespace,
 the tool must be able to infer the left margin.
 
@@ -63,14 +42,6 @@ When only a simple, short description is needed, a one-line format can be used:
 
     /** Does something very simple */
     def simple: Unit = ()
-
-Note that, in contrast to the Javadoc convention, the text in
-the Scaladoc styles begins on the first line of the comment.
-This format saves vertical space in the source file.
-
-In either Scaladoc style, all lines of text are aligned on column five.
-Since Scala source is usually indented by two spaces,
-the text aligns with source indentation in a way that is visually pleasing.
 
 See
 [Scaladoc for Library Authors]({{ site.baseurl }}/overviews/scaladoc/for-library-authors.html)

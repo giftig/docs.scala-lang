@@ -5,11 +5,14 @@ title: Imports
 partof: style
 overview-name: "Style Guide"
 
-num: 1
+num: 3
 
 previous-page: indentation
 next-page: naming-conventions
 ---
+
+We opt for an import organisation style which makes imports easy to read and
+separate, and matches typical community and industry practices.
 
 ## Import order
 

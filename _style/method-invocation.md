@@ -5,7 +5,7 @@ title: Method Invocation
 partof: style
 overview-name: "Style Guide"
 
-num: 8
+num: 9
 
 previous-page: control-structures
 next-page: declarations

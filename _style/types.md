@@ -5,7 +5,7 @@ title: Types
 partof: style
 overview-name: "Style Guide"
 
-num: 4
+num: 5
 
 previous-page: naming-conventions
 next-page: nested-blocks

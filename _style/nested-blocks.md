@@ -5,7 +5,7 @@ title: Nested Blocks
 partof: style
 overview-name: "Style Guide"
 
-num: 5
+num: 6
 
 previous-page: types
 next-page: files

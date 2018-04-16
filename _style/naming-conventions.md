@@ -5,9 +5,9 @@ title: Naming Conventions
 partof: style
 overview-name: "Style Guide"
 
-num: 3
+num: 4
 
-previous-page: indentation
+previous-page: imports
 next-page: types
 ---
 

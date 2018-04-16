@@ -5,7 +5,7 @@ title: Files
 partof: style
 overview-name: "Style Guide"
 
-num: 6
+num: 7
 
 previous-page: nested-blocks
 next-page: control-structures

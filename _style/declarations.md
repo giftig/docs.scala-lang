@@ -5,7 +5,7 @@ title: Declarations
 partof: style
 overview-name: "Style Guide"
 
-num: 9
+num: 10
 
 previous-page: method-invocation
 next-page: scaladoc
