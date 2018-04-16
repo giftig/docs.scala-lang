@@ -35,7 +35,8 @@ If a class/object/trait extends anything, the same general rule applies,
 put it on one line unless it goes over about 100 characters, and then
 indent **two** spaces, with each item being on its own line, and also
 **two** spaces for extensions. Visual separation of arguments and extensions
-is provided by the closing bracket in the argument list.
+is provided by the closing bracket in the argument list, and separation
+of extensions and methods can be easily achieved by leaving a blank line.
 
     class Person(
       name: String,
@@ -48,6 +49,8 @@ is provided by the closing bracket in the argument list.
       with Logging
       with Identifiable
       with Serializable {
+
+      def firstMethod: Foo = ...
     }
 
 ### Ordering Of Class Elements
