@@ -8,7 +8,7 @@ overview-name: "Style Guide"
 num: 2
 
 previous-page: overview
-next-page: naming-conventions
+next-page: imports
 ---
 
 Indentation should follow the "2-space convention". Thus, instead of

@@ -11,6 +11,7 @@ This document is intended to outline some basic Scala stylistic guidelines which
 - [Indentation](indentation.html)
   - [Line Wrapping](indentation.html#line-wrapping)
   - [Methods with Numerous Arguments](indentation.html#methods-with-numerous-arguments)
+- [Imports](imports.html)
 - [Naming Conventions](naming-conventions.html)
   - [Classes/Traits](naming-conventions.html#classestraits)
   - [Objects](naming-conventions.html#objects)
