@@ -15,35 +15,36 @@ next-page: scaladoc
 
 Class/Object/Trait constructors should be declared all on one line,
 unless the line becomes "too long" (about 100 characters). In that case,
-put each constructor argument on its own line, indented **four** spaces:
+put each constructor argument on its own line, indented **two** spaces:
 
     class Person(name: String, age: Int) {
     }
 
     class Person(
-        name: String,
-        age: Int,
-        birthdate: Date,
-        astrologicalSign: String,
-        shoeSize: Int,
-        favoriteColor: java.awt.Color) {
+      name: String,
+      age: Int,
+      birthdate: Date,
+      astrologicalSign: String,
+      shoeSize: Int,
+      favoriteColor: java.awt.Color
+    ) {
       def firstMethod: Foo = ...
     }
 
 If a class/object/trait extends anything, the same general rule applies,
 put it on one line unless it goes over about 100 characters, and then
-indent **four** spaces with each item being on its own line and **two**
-spaces for extensions; this provides visual separation between
-constructor arguments and extensions:
+indent **two** spaces, with each item being on its own line, and also
+**two** spaces for extensions. Visual separation of arguments and extensions
+is provided by the closing bracket in the argument list.
 
     class Person(
-        name: String,
-        age: Int,
-        birthdate: Date,
-        astrologicalSign: String,
-        shoeSize: Int,
-        favoriteColor: java.awt.Color)
-      extends Entity
+      name: String,
+      age: Int,
+      birthdate: Date,
+      astrologicalSign: String,
+      shoeSize: Int,
+      favoriteColor: java.awt.Color
+    ) extends Entity
       with Logging
       with Identifiable
       with Serializable {
@@ -217,13 +218,18 @@ There are three main reasons you should do this:
         List("").foldLeft[Int](0, _ + _.length)
 
 For complex DSLs, or with type-names that are long, it can be difficult
-to fit the entire signature on one line. In those cases, align the
-open-paren of the parameter lists, one list per line (i.e. if you can't
-put them all on one line, put one each per line):
+to fit the entire signature on one line. In those cases, wrap at the
+opening bracket, lining up brackets and indenting argument lists, as with
+any other call or declaration:
 
-    protected def forResource(resourceInfo: Any)
-                             (f: (JsonNode) => Any)
-                             (implicit urlCreator: URLCreator, configurer: OAuthConfiguration): Any = {
+    protected def forResource(
+      resourceInfo: Any
+    )(
+      f: (JsonNode) => Any
+    )(
+      implicit urlCreator: URLCreator,
+      configurer: OAuthConfiguration
+    ): Any = {
       ...
     }
 
@@ -279,11 +285,11 @@ function value.
 
 When styles (1) and (4) are used exclusively, it becomes very easy to
 distinguish places in the source code where function values are used.
-Both styles make use of parentheses, since they look clean on a single line.  
+Both styles make use of parentheses, since they look clean on a single line.
 
 ### Spacing
 
-There should be no space between parentheses and the code they contain.  
+There should be no space between parentheses and the code they contain.
 Curly braces should be separated from the code within them by a one-space gap,
 to give the visually busy braces "breathing room".
 
